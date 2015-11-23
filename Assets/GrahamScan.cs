@@ -24,10 +24,12 @@ public class GrahamScan {
                 return 0;
             }
         );
+
         List<Vector3> lUpper = new List<Vector3>();
         lUpper.Add(points[0]);
         lUpper.Add(points[1]);
-        for (int i = 2; i < points.Count; i++)
+        int pointsCount = points.Count;
+        for (int i = 2; i < pointsCount; i++)
         {
             lUpper.Add(points[i]);
             int count = lUpper.Count;
@@ -59,8 +61,8 @@ public class GrahamScan {
         List<Vector3> hull = new List<Vector3>();
         hull.AddRange(lLower);
         hull.AddRange(lUpper);
-        if (lLower.Count > 0)
-            hull.Add(lLower[0]);
+//        if (lLower.Count > 0)
+            hull.Add(hull[0]);
 
         return hull;
     }

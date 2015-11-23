@@ -7,3 +7,5 @@ Sekcja:
 - B³a¿ej Szczygie³
 
 Generowanie otoczki wypuk³ej algorytmem Grahama.
+
+Aby otworzyæ menu naciœnij przycisk Escape.

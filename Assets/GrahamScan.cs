@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class GrahamScan : MonoBehaviour {
+public class GrahamScan {
     public List<Vector3> points;
 
     public GrahamScan(List<Vector3> points)
@@ -59,7 +59,8 @@ public class GrahamScan : MonoBehaviour {
         List<Vector3> hull = new List<Vector3>();
         hull.AddRange(lLower);
         hull.AddRange(lUpper);
-        hull.Add(lLower[0]);
+        if (lLower.Count > 0)
+            hull.Add(lLower[0]);
 
         return hull;
     }
